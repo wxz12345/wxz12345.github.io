@@ -1,1 +1,450 @@
-<h1> 欢迎来到 xz wang 的网页！</h1>
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xizhi Wang · HKUST</title>
+  <meta name="description" content="Xizhi Wang — Ph.D. student at HKUST working on computer vision and wearable agents.">
+  <meta name="author" content="Xizhi Wang">
+  <meta property="og:title" content="Xizhi Wang · HKUST">
+  <meta property="og:description" content="Ph.D. student at HKUST · Computer Vision · Wearable Agents">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Apply saved language / theme before first paint to avoid flicker -->
+  <script>
+    (function () {
+      var d = document.documentElement, lang, theme;
+      try { lang = localStorage.getItem('lang'); theme = localStorage.getItem('theme'); } catch (e) {}
+      if (!lang) lang = /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
+      d.setAttribute('data-lang', lang);
+      d.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      if (theme) d.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="top">
+  <div class="nav__inner container">
+    <a class="nav__brand" href="#top" aria-label="Home">
+      <span class="nav__logo">XW</span>
+      <span class="nav__name">Xizhi Wang</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about"><span data-l="en">About</span><span data-l="zh">关于</span></a>
+      <a href="#news"><span data-l="en">News</span><span data-l="zh">动态</span></a>
+      <a href="#research"><span data-l="en">Research</span><span data-l="zh">研究</span></a>
+      <a href="#publications"><span data-l="en">Publications</span><span data-l="zh">论文</span></a>
+      <a href="#experience"><span data-l="en">Experience</span><span data-l="zh">经历</span></a>
+      <a href="#projects"><span data-l="en">Projects</span><span data-l="zh">小项目</span></a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="pill-btn" id="langToggle" type="button" aria-label="Switch language / 切换语言">
+        <span class="pill-btn__opt" data-opt="en">EN</span>
+        <span class="pill-btn__opt" data-opt="zh">中</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+      </button>
+      <button class="icon-btn nav__menu" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ HERO / ABOUT ============================ -->
+<section class="hero" id="about">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__grid">
+    <div class="hero__text reveal">
+      <p class="eyebrow">
+        <span class="dot-live"></span>
+        <span data-l="en">Ph.D. Student · HKUST</span>
+        <span data-l="zh">香港科技大学 · 博士研究生</span>
+      </p>
+
+      <h1 class="hero__title">
+        <span data-l="en">Hi, I'm <span class="grad">Xizhi Wang</span>.</span>
+        <!-- TODO: 如需显示中文名，把下面的 Xizhi Wang 换成中文名 -->
+        <span data-l="zh">你好，我是 <span class="grad">Xizhi Wang</span>。</span>
+      </h1>
+
+      <p class="hero__lead" data-l="en">
+        I am a Ph.D. student at the Hong Kong University of Science and Technology (HKUST).
+        My research lies in <b>computer vision</b> and <b>wearable agents</b> — building AI systems that
+        perceive the world from a first-person view, understand multimodal (visual, audio and wireless) signals,
+        and assist people in everyday life. I also work on evaluating multimodal generative models.
+      </p>
+      <p class="hero__lead" data-l="zh">
+        我目前是香港科技大学（HKUST）的博士研究生，研究方向为<b>计算机视觉</b>与<b>可穿戴智能体（Wearable Agent）</b>：
+        希望构建能够以第一人称视角感知世界、理解视觉／音频／无线等多模态信号，并在日常生活中真正帮到人的 AI 系统。
+        此外我也关注多模态生成模型的评测。
+      </p>
+
+      <ul class="chips" aria-label="Research interests">
+        <li><span data-l="en">Computer Vision</span><span data-l="zh">计算机视觉</span></li>
+        <li><span data-l="en">Wearable Agents</span><span data-l="zh">可穿戴智能体</span></li>
+        <li><span data-l="en">Egocentric Perception</span><span data-l="zh">第一人称感知</span></li>
+        <li><span data-l="en">Audio-Visual Generation</span><span data-l="zh">音视频生成</span></li>
+      </ul>
+
+      <div class="links">
+        <!-- TODO: 换成真实邮箱 -->
+        <a class="btn btn--primary" href="mailto:your_id@connect.ust.hk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+          Email
+        </a>
+        <a class="btn" href="https://scholar.google.com/citations?user=LtIb3acAAAAJ" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 9l10 6 10-6-10-6Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>
+          Google Scholar
+        </a>
+        <a class="btn" href="https://github.com/wxz12345" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+          GitHub
+        </a>
+        <!-- TODO: 把 CV 放到 assets/cv.pdf -->
+        <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          CV
+        </a>
+      </div>
+    </div>
+
+    <aside class="hero__card reveal">
+      <div class="avatar">
+        <!-- TODO: 换成真实头像，例如 <img src="assets/img/avatar.jpg" alt="Xizhi Wang"> -->
+        <img src="assets/img/avatar-placeholder.svg" alt="Xizhi Wang">
+      </div>
+      <div class="hero__meta">
+        <p class="hero__meta-name">Xizhi Wang</p>
+        <p class="muted">
+          <span data-l="en">The Hong Kong University of Science and Technology</span>
+          <span data-l="zh">香港科技大学</span>
+        </p>
+        <p class="muted small">
+          <svg class="inline-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <span data-l="en">Hong Kong / Tokyo</span><span data-l="zh">香港 / 东京</span>
+        </p>
+      </div>
+      <div class="stats" aria-label="Google Scholar statistics">
+        <div class="stat"><span class="stat__num">34</span><span class="stat__label"><span data-l="en">Citations</span><span data-l="zh">总引用</span></span></div>
+        <div class="stat"><span class="stat__num">2</span><span class="stat__label">h-index</span></div>
+        <div class="stat"><span class="stat__num">1</span><span class="stat__label">i10-index</span></div>
+      </div>
+      <p class="tiny muted center">
+        <span data-l="en">Google Scholar · Nov 2026</span><span data-l="zh">数据来自 Google Scholar · 2026 年 11 月</span>
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================ NEWS ============================ -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">01</span>
+      <h2><span data-l="en">News</span><span data-l="zh">最新动态</span></h2>
+    </div>
+
+    <ul class="news reveal">
+      <li class="news__item">
+        <time>2026</time>
+        <p>
+          <span class="tag tag--hot">Paper</span>
+          <span data-l="en"><b>VABench</b>, a comprehensive benchmark for audio-video generation, is published at <b>CVPR 2026</b>!</span>
+          <span data-l="zh">音视频生成综合评测基准 <b>VABench</b> 发表于 <b>CVPR 2026</b>！</span>
+        </p>
+      </li>
+      <li class="news__item">
+        <time>2025</time>
+        <p>
+          <span class="tag">Paper</span>
+          <span data-l="en">Our paper on classifying UAVs and birds in ISAC base stations is published at <b>IEEE VTC2025-Fall</b>.</span>
+          <span data-l="zh">关于通感一体化（ISAC）基站中无人机与鸟类分类的论文发表于 <b>IEEE VTC2025-Fall</b>。</span>
+        </p>
+      </li>
+      <!-- TODO: 补充更多动态，例如入学、实习、访问等 -->
+      <li class="news__item">
+        <time>20XX</time>
+        <p>
+          <span class="tag tag--soft">Life</span>
+          <span data-l="en">Started my Ph.D. at HKUST. <em class="muted">(placeholder)</em></span>
+          <span data-l="zh">开始在香港科技大学攻读博士学位。<em class="muted">（占位）</em></span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ RESEARCH ============================ -->
+<section class="section section--alt" id="research">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">02</span>
+      <h2><span data-l="en">Research</span><span data-l="zh">研究方向</span></h2>
+      <p class="section__sub">
+        <span data-l="en">What I'm working on — published work and ongoing projects.</span>
+        <span data-l="zh">正在做的事情：包括已发表的工作和进行中的项目。</span>
+      </p>
+    </div>
+
+    <div class="cards cards--3">
+      <!-- Research card 1 -->
+      <article class="rcard reveal">
+        <div class="rcard__icon rcard__icon--a" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M10.5 13h3M3.5 13 2 9.5M20.5 13 22 9.5"/></svg>
+        </div>
+        <span class="status status--ongoing"><span data-l="en">Ongoing</span><span data-l="zh">进行中</span></span>
+        <h3><span data-l="en">Wearable Agents</span><span data-l="zh">可穿戴智能体</span></h3>
+        <p data-l="en">
+          AI assistants that live on wearable devices such as smart glasses: perceiving the user's surroundings
+          from an egocentric view, reasoning over long-horizon context, and proactively offering help in daily tasks.
+        </p>
+        <p data-l="zh">
+          运行在智能眼镜等可穿戴设备上的 AI 助手：以第一人称视角感知用户所处环境，
+          在长时程上下文中进行推理，并在日常任务中主动提供帮助。
+        </p>
+        <ul class="mini-tags"><li>Egocentric Vision</li><li>MLLM</li><li>Agent</li></ul>
+      </article>
+
+      <!-- Research card 2 -->
+      <article class="rcard reveal">
+        <div class="rcard__icon rcard__icon--b" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg>
+        </div>
+        <span class="status status--pub"><span data-l="en">CVPR 2026</span><span data-l="zh">CVPR 2026</span></span>
+        <h3><span data-l="en">Audio-Video Generation &amp; Evaluation</span><span data-l="zh">音视频生成与评测</span></h3>
+        <p data-l="en">
+          Systematically evaluating joint audio-video generative models — visual quality, audio quality and,
+          crucially, cross-modal synchronization and semantic alignment between what we see and what we hear.
+        </p>
+        <p data-l="zh">
+          系统性地评测音视频联合生成模型：不仅关注画面与声音各自的质量，
+          更关注两者之间的跨模态同步性与语义一致性——“看到的”与“听到的”是否对得上。
+        </p>
+        <ul class="mini-tags"><li>Benchmark</li><li>Multimodal Generation</li></ul>
+      </article>
+
+      <!-- Research card 3 -->
+      <article class="rcard reveal">
+        <div class="rcard__icon rcard__icon--c" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 20v-7"/><circle cx="12" cy="11" r="2"/><path d="M8.5 7.5a5 5 0 0 0 0 7M15.5 7.5a5 5 0 0 1 0 7M5.5 4.5a9 9 0 0 0 0 13M18.5 4.5a9 9 0 0 1 0 13"/></svg>
+        </div>
+        <span class="status status--pub"><span data-l="en">VTC 2025</span><span data-l="zh">VTC 2025</span></span>
+        <h3><span data-l="en">Wireless Sensing &amp; ISAC</span><span data-l="zh">无线感知与通感一体化</span></h3>
+        <p data-l="en">
+          Bringing deep learning to integrated sensing and communication (ISAC): lightweight neural networks that
+          let base stations recognize targets such as UAVs and birds from radio signals.
+        </p>
+        <p data-l="zh">
+          将深度学习引入通感一体化（ISAC）：设计轻量级神经网络，
+          让基站能够仅凭无线信号识别无人机、鸟类等低空目标。
+        </p>
+        <ul class="mini-tags"><li>ISAC</li><li>Lightweight Network</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PUBLICATIONS ============================ -->
+<section class="section" id="publications">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">03</span>
+      <h2><span data-l="en">Publications</span><span data-l="zh">发表论文</span></h2>
+      <p class="section__sub">
+        <span data-l="en">See <a href="https://scholar.google.com/citations?user=LtIb3acAAAAJ" target="_blank" rel="noopener">Google Scholar</a> for the full list.</span>
+        <span data-l="zh">完整列表见 <a href="https://scholar.google.com/citations?user=LtIb3acAAAAJ" target="_blank" rel="noopener">Google Scholar</a>。</span>
+      </p>
+    </div>
+
+    <div class="pubs">
+      <!-- Publication 1 -->
+      <article class="pub reveal">
+        <div class="pub__thumb pub__thumb--a" aria-hidden="true">
+          <!-- TODO: 可替换为论文 teaser 图：<img src="assets/img/vabench.png" alt=""> -->
+          <span>VABench</span>
+        </div>
+        <div class="pub__body">
+          <div class="pub__venue">
+            <span class="venue venue--top">CVPR 2026</span>
+            <span class="cite-count">32 <span data-l="en">citations</span><span data-l="zh">次引用</span></span>
+          </div>
+          <h3 class="pub__title">VABench: A Comprehensive Benchmark for Audio-Video Generation</h3>
+          <p class="pub__authors">
+            D. Hua, <b class="me">X. Wang</b>, B. Zeng, X. Huang, H. Liang, J. Niu, X. Chen, Q. Xu, <i>et al.</i>
+          </p>
+          <p class="pub__where">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</p>
+          <div class="pub__links">
+            <!-- TODO: 补充 arXiv / 项目主页 / 代码链接 -->
+            <a href="https://scholar.google.com/scholar?q=VABench%3A+A+comprehensive+benchmark+for+audio-video+generation" target="_blank" rel="noopener">Paper</a>
+            <a href="#" class="is-todo" aria-disabled="true">Project</a>
+            <a href="#" class="is-todo" aria-disabled="true">Code</a>
+            <button type="button" class="bib-toggle" aria-expanded="false">BibTeX</button>
+          </div>
+          <pre class="bib" hidden>@inproceedings{hua2026vabench,
+  title     = {VABench: A Comprehensive Benchmark for Audio-Video Generation},
+  author    = {Hua, D. and Wang, Xizhi and Zeng, B. and Huang, X. and Liang, H. and Niu, J. and Chen, X. and Xu, Q. and others},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026}
+}</pre>
+        </div>
+      </article>
+
+      <!-- Publication 2 -->
+      <article class="pub reveal">
+        <div class="pub__thumb pub__thumb--b" aria-hidden="true">
+          <span>SBRN</span>
+        </div>
+        <div class="pub__body">
+          <div class="pub__venue">
+            <span class="venue">VTC2025-Fall</span>
+            <span class="cite-count">2 <span data-l="en">citations</span><span data-l="zh">次引用</span></span>
+          </div>
+          <h3 class="pub__title">Shallow Brain Residual Network for Classifying UAVs and Birds in ISAC Base Stations</h3>
+          <p class="pub__authors">
+            M. Sun, H. Yin, <b class="me">X. Wang</b>, G. Zhu, M. Debbah
+          </p>
+          <p class="pub__where">2025 IEEE 102nd Vehicular Technology Conference (VTC2025-Fall), pp. 1–6, 2025</p>
+          <div class="pub__links">
+            <a href="https://scholar.google.com/scholar?q=Shallow+Brain+Residual+Network+for+Classifying+UAVs+and+Birds+in+ISAC+Base+Stations" target="_blank" rel="noopener">Paper</a>
+            <button type="button" class="bib-toggle" aria-expanded="false">BibTeX</button>
+          </div>
+          <pre class="bib" hidden>@inproceedings{sun2025shallow,
+  title     = {Shallow Brain Residual Network for Classifying UAVs and Birds in ISAC Base Stations},
+  author    = {Sun, M. and Yin, H. and Wang, Xizhi and Zhu, G. and Debbah, M.},
+  booktitle = {2025 IEEE 102nd Vehicular Technology Conference (VTC2025-Fall)},
+  pages     = {1--6},
+  year      = {2025}
+}</pre>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="section section--alt" id="experience">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">04</span>
+      <h2><span data-l="en">Education &amp; Experience</span><span data-l="zh">教育与经历</span></h2>
+    </div>
+
+    <!-- TODO: 按实际经历修改；占位条目标了 placeholder -->
+    <ol class="timeline reveal">
+      <li class="timeline__item">
+        <span class="timeline__dot"></span>
+        <div class="timeline__when">20XX — <span data-l="en">Present</span><span data-l="zh">至今</span></div>
+        <div class="timeline__what">
+          <h3><span data-l="en">Ph.D. Student</span><span data-l="zh">博士研究生</span></h3>
+          <p>
+            <span data-l="en">The Hong Kong University of Science and Technology (HKUST)</span>
+            <span data-l="zh">香港科技大学（HKUST）</span>
+          </p>
+          <p class="muted small">
+            <span data-l="en">Advisor: Prof. XXX · Computer Vision, Wearable Agents</span>
+            <span data-l="zh">导师：XXX 教授 · 计算机视觉、可穿戴智能体</span>
+          </p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__dot timeline__dot--muted"></span>
+        <div class="timeline__when">20XX — 20XX</div>
+        <div class="timeline__what">
+          <h3><span data-l="en">Research Intern / Visiting Student</span><span data-l="zh">研究实习 / 访问学生</span></h3>
+          <p><span data-l="en">Organization, Tokyo <em class="muted">(placeholder)</em></span><span data-l="zh">机构名称，东京 <em class="muted">（占位）</em></span></p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__dot timeline__dot--muted"></span>
+        <div class="timeline__when">20XX — 20XX</div>
+        <div class="timeline__what">
+          <h3><span data-l="en">B.Eng. in XXX</span><span data-l="zh">XXX 专业 · 工学学士</span></h3>
+          <p><span data-l="en">University Name <em class="muted">(placeholder)</em></span><span data-l="zh">本科学校 <em class="muted">（占位）</em></span></p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ SIDE PROJECTS ============================ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__num">05</span>
+      <h2><span data-l="en">Side Projects</span><span data-l="zh">业余小项目</span></h2>
+      <p class="section__sub">
+        <span data-l="en">Small tools I built for myself, for fun.</span>
+        <span data-l="zh">给自己做的一些小工具，纯属兴趣。</span>
+      </p>
+    </div>
+
+    <div class="cards cards--3">
+      <a class="pcard reveal" href="https://github.com/wxz12345/self_clock" target="_blank" rel="noopener">
+        <div class="pcard__top">
+          <span class="pcard__emoji" aria-hidden="true">🍅</span>
+          <svg class="pcard__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </div>
+        <h3>SelfClock</h3>
+        <p data-l="en">A self-discipline Pomodoro app for Windows — distraction logging, app blacklist, white-noise mixer and focus statistics. All data stays local.</p>
+        <p data-l="zh">Windows 桌面端“自律番茄钟”：记录分心原因、程序黑名单、白噪音混音器与专注统计，数据全部存在本地。</p>
+        <div class="pcard__meta"><span class="lang-dot lang-dot--py"></span>Python · PySide6</div>
+      </a>
+
+      <a class="pcard reveal" href="https://github.com/wxz12345/CodexBar" target="_blank" rel="noopener">
+        <div class="pcard__top">
+          <span class="pcard__emoji" aria-hidden="true">📊</span>
+          <svg class="pcard__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </div>
+        <h3>CodexBar</h3>
+        <p data-l="en">A Windows taskbar widget that monitors Codex quota, daily tokens, usage trends and API-equivalent cost. Built on a community project.</p>
+        <p data-l="zh">Windows 任务栏上的 Codex 用量监控小组件：额度、今日 token、用量趋势和 API 等价花费一目了然。基于社区项目改进。</p>
+        <div class="pcard__meta"><span class="lang-dot lang-dot--py"></span>Python</div>
+      </a>
+
+      <a class="pcard reveal" href="https://github.com/wxz12345/ViT_pytorch" target="_blank" rel="noopener">
+        <div class="pcard__top">
+          <span class="pcard__emoji" aria-hidden="true">🧩</span>
+          <svg class="pcard__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </div>
+        <h3>ViT_pytorch</h3>
+        <p data-l="en">A minimal, readable Vision Transformer in PyTorch for teaching and experiments, with a One-vs-Rest training wrapper.</p>
+        <p data-l="zh">一个简洁易读的 PyTorch 版 Vision Transformer 实现，用于教学与实验，附带 One-vs-Rest 训练封装。</p>
+        <div class="pcard__meta"><span class="lang-dot lang-dot--py"></span>Python · PyTorch</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© 2026 Xizhi Wang</p>
+    <p class="muted">
+      <span data-l="en">Last updated: Nov 2026</span><span data-l="zh">最后更新：2026 年 11 月</span>
+    </p>
+    <a class="to-top" href="#top">
+      <span data-l="en">Back to top ↑</span><span data-l="zh">回到顶部 ↑</span>
+    </a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
