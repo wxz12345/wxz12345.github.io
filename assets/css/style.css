@@ -266,6 +266,7 @@ html[data-lang="zh"] .pill-btn__opt[data-opt="zh"] { background: var(--text); co
 
 /* ---------- Cards ---------- */
 .cards { display: grid; gap: 20px; }
+.cards--2 { grid-template-columns: repeat(2, 1fr); }
 .cards--3 { grid-template-columns: repeat(3, 1fr); }
 
 .rcard {
@@ -416,7 +417,7 @@ html[data-lang="zh"] .pill-btn__opt[data-opt="zh"] { background: var(--text); co
 }
 @media (max-width: 600px) {
   .container { padding: 0 16px; }
-  .cards--3 { grid-template-columns: 1fr; }
+  .cards--2, .cards--3 { grid-template-columns: 1fr; }
   .nav__name { display: none; }
   .news__item { grid-template-columns: 1fr; gap: 2px; }
   .hero__lead { font-size: 1rem; }
