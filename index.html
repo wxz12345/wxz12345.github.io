@@ -28,10 +28,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="top">
 
 <!-- ============================ NAV ============================ -->
-<header class="nav" id="top">
+<header class="nav">
   <div class="nav__inner container">
     <a class="nav__brand" href="#top" aria-label="Home">
       <span class="nav__logo">XW</span>
@@ -195,8 +195,8 @@
       <span class="section__num">02</span>
       <h2><span data-l="en">Research</span><span data-l="zh">研究方向</span></h2>
       <p class="section__sub">
-        <span data-l="en">What I'm working on — published work and ongoing projects.</span>
-        <span data-l="zh">正在做的事情：包括已发表的工作和进行中的项目。</span>
+        <span data-l="en">Current research and previous work, from recent to earlier projects.</span>
+        <span data-l="zh">当前研究与此前工作，按由近及远的顺序排列。</span>
       </p>
     </div>
 
@@ -222,7 +222,23 @@
         <ul class="mini-tags"><li>MLLM</li><li>Personal Agent</li><li>Memory</li><li>Efficient Perception</li></ul>
       </article>
 
-      <!-- Research card 2 -->
+      <article class="rcard reveal">
+        <div class="rcard__icon rcard__icon--a" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2M8 7h8M12 4v8"/></svg>
+        </div>
+        <span class="status status--pub"><span data-l="en">Previous Work</span><span data-l="zh">此前工作</span></span>
+        <h3><span data-l="en">3D Digital Humans</span><span data-l="zh">3D 数字人</span></h3>
+        <p data-l="en">
+          Work on facial reconstruction from video, facial motion capture and expressive avatar animation,
+          connecting 3D face representations with digital human rendering.
+        </p>
+        <p data-l="zh">
+          围绕基于视频的人脸重建、面部动作捕捉与表情驱动的数字人动画开展工作，
+          将三维人脸表征与数字人渲染相结合。
+        </p>
+        <ul class="mini-tags"><li>3D Reconstruction</li><li>Facial Animation</li><li>Avatar Rendering</li></ul>
+      </article>
+
       <article class="rcard reveal">
         <div class="rcard__icon rcard__icon--b" aria-hidden="true">
           <svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="2.5"/><path d="m16 10 5-3v10l-5-3"/></svg>
@@ -240,7 +256,6 @@
         <ul class="mini-tags"><li>Benchmark</li><li>Multimodal Generation</li></ul>
       </article>
 
-      <!-- Research card 3 -->
       <article class="rcard reveal">
         <div class="rcard__icon rcard__icon--c" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M12 20v-7"/><circle cx="12" cy="11" r="2"/><path d="M8.5 7.5a5 5 0 0 0 0 7M15.5 7.5a5 5 0 0 1 0 7M5.5 4.5a9 9 0 0 0 0 13M18.5 4.5a9 9 0 0 1 0 13"/></svg>
@@ -258,22 +273,6 @@
         <ul class="mini-tags"><li>ISAC</li><li>Lightweight Network</li></ul>
       </article>
 
-      <article class="rcard reveal">
-        <div class="rcard__icon rcard__icon--a" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2M8 7h8M12 4v8"/></svg>
-        </div>
-        <span class="status status--ongoing"><span data-l="en">Exploration</span><span data-l="zh">研究探索</span></span>
-        <h3><span data-l="en">3D Digital Humans</span><span data-l="zh">3D 数字人</span></h3>
-        <p data-l="en">
-          Exploring facial reconstruction from video, facial motion capture and expressive avatar animation,
-          connecting 3D face representations with digital human rendering.
-        </p>
-        <p data-l="zh">
-          探索基于视频的人脸重建、面部动作捕捉与表情驱动的数字人动画，
-          将三维人脸表征与数字人渲染相结合。
-        </p>
-        <ul class="mini-tags"><li>3D Reconstruction</li><li>Facial Animation</li><li>Avatar Rendering</li></ul>
-      </article>
     </div>
   </div>
 </section>
